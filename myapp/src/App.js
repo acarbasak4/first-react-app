@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import One from './One';
-import {Two, Three} from './Two';
-
+import One from "./One";
+import { Two, Three } from "./Two";
 
 // function App() {
 //   return (
@@ -63,22 +62,20 @@ import {Two, Three} from './Two';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-
-    };
+    this.state = {};
   }
 
-
   render() {
-      return (
-        <div>
-      <One></One>
-      <Two></Two>
-      <Three></Three>
+    return (
+      <React.Fragment>
+        <One></One>
+        <Two></Two>
+        <Three></Three>
 
-
-        </div>
-      )
+        <h1>Hello</h1>
+        <h1>Hello 2</h1>
+      </React.Fragment>
+    );
   }
 }
 
