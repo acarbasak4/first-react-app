@@ -29,6 +29,18 @@ constructor(props){
     }
   
 }
+ageDown = () =>{
+  this.setState((previousState =>({
+    age: previousState.age - 1
+  })));
+
+}
+ageUp = () =>{
+  this.setState((previousState =>({
+    age: previousState.age + 1
+  })));
+
+}
 
   render(){
     return(
@@ -38,6 +50,8 @@ constructor(props){
       </p>
       <p> {this.state.name}</p>
       <p>{this.state.age} </p>
+      <button onClick={this.ageUp}>Up</button>
+      <button onClick={this.ageDown}>Down</button>
       </div>
     );
   }
