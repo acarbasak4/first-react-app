@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import One from './One';
+import {Two, Three} from './Two';
+
 
 // function App() {
 //   return (
@@ -61,32 +64,21 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showButton: false,
+
     };
   }
 
-  update = () => {
-    this.setState((previousState) => ({
-      showButton: !previousState.showButton,
-    }));
-  };
 
   render() {
-    const { showButton } = this.state;
-    if (showButton) {
       return (
         <div>
-          <button>My Button</button>
-          <button onClick={this.update}>Update</button>
+      <One></One>
+      <Two></Two>
+      <Three></Three>
+
+
         </div>
-      );
-    } else {
-      return (
-        <div>
-          <button onClick={this.update}>Update</button>
-        </div>
-      );
-    }
+      )
   }
 }
 
